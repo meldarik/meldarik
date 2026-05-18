@@ -1,82 +1,93 @@
 # DSA210 Project  
 ## Identifying the Optimal Study Time for Maximum Academic Performance  
 
-## Project Objective  
-This project investigates how different study-related factors affect students’ academic performance.  
-The main goal is to determine whether certain behaviors—such as study time and test preparation—are associated with higher exam scores.
+**Melda Arık — 34268**  
 
 ---
 
-## Dataset Description  
-The dataset contains student-level observations including:
+## Project Overview  
 
-- Gender, Ethnic Group  
-- Parental Education Level  
-- Lunch Type  
-- Test Preparation Course  
-- Weekly Study Hours  
-- Math, Reading, and Writing Scores  
+This project examines how different study-related factors affect students’ academic performance.  
+
+The main focus is understanding whether variables such as weekly study hours and test preparation are associated with higher exam scores and whether these variables can be used to predict academic performance.
+
+The project includes:
+- Exploratory Data Analysis (EDA)
+- Hypothesis Testing
+- Machine Learning Models
+
+---
+
+## Research Question  
+
+> How do study habits and preparation affect students’ exam performance?
+
+---
+
+## Dataset  
+
+The project uses the **Student Test Scores: Extended Dataset** from Kaggle.  
+
+The dataset includes variables such as:
+- Gender
+- Parent Education
+- Lunch Type
+- Test Preparation
+- Weekly Study Hours
+- Number of Siblings
+- Transportation Method
+- Math, Reading, and Writing Scores
 
 ### Target Variable  
-A new variable **`ExamScore`** is created as the average of Math, Reading, and Writing scores.
+
+A new variable called `ExamScore` was created as the average of:
+- Math Score
+- Reading Score
+- Writing Score
 
 ---
 
-## Methodology  
+## Methods  
 
 ### Data Preprocessing  
-- Missing values were handled using **mode imputation**  
-- A new feature (**ExamScore**) was engineered  
+- Missing values were handled using mode imputation  
+- A new feature (`ExamScore`) was created  
 
----
-
-### Exploratory Data Analysis (EDA)  
-- Countplots and grouped averages were used to understand distributions  
-- Relationships between categorical variables and scores were visually explored  
-
----
+### Exploratory Data Analysis  
+- Distribution analysis  
+- Group comparisons  
+- Countplots and visual analysis  
 
 ### Hypothesis Testing  
+- Independent t-test  
+- One-Way ANOVA  
 
-#### 1. Effect of Test Preparation  
-- **Test used:** Independent t-test  
-- **Result:**  
-  - T-statistic ≈ 39.10  
-  - P-value ≈ 0.0  
+### Machine Learning  
+- Linear Regression  
+- Decision Tree Regressor  
+- Random Forest Regressor  
 
- Students who completed the test preparation course have **significantly higher exam scores**.
-
----
-
-#### 2. Effect of Weekly Study Hours  
-- **Test used:** One-way ANOVA  
-- **Result:**  
-  - F-statistic ≈ 75.65  
-  - P-value ≈ 1.67e-33  
-
- There is a **statistically significant difference** between study hour groups.
+Models were evaluated using:
+- RMSE
+- R² Score
+- Cross-validation
 
 ---
 
-## Key Findings  
+## Main Findings  
 
-- Test preparation has a **strong positive impact** on performance  
-- Students who study more tend to have **higher average scores**  
-- Weekly study hours and preparation are the **most influential factors**  
-- Other variables (gender, parental education, etc.) show **weaker effects**
+- Students who study more generally achieve higher exam scores  
+- Test preparation is associated with better academic performance  
+- Weekly study hours showed statistically significant differences between groups  
+- Linear Regression performed better than the other tested models  
+- Machine learning models showed limited predictive performance overall  
 
----
-
-## Final Conclusion  
-
-This analysis demonstrates that **student effort and preparation play a crucial role in academic success**.  
-
-Among all variables, **test preparation and study time** show the strongest relationship with exam performance.  
-
-Students who both **prepare for exams and dedicate more time to studying** consistently achieve higher scores.
+One important finding of the project is that statistically significant variables may still have limited predictive power in machine learning models.
 
 ---
 
-## Key Insight  
+## Final Note  
 
-> Academic success is less about background factors and more about consistent effort and preparation.
+This project combines statistical analysis and machine learning methods to better understand the relationship between study habits and academic performance.  
+
+The findings suggest that study-related variables are important, but they are not sufficient alone to fully explain student success.
